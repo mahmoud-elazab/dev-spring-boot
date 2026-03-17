@@ -5,7 +5,14 @@
     <title>Thymeleaf Demo</title>
 </head>
 <body>
-<p th:text="' Time on the server is ' +${theDate}"/>
+Hallo <span th:text="${param.studentName}" />!
 
+<br><br>
+
+Herzlich willkommen auf unserer Webseite!
+
+<br><br>
+
+The message: <span th:text="${message}"/>
 </body>
 </html>
