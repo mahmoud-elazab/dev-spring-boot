@@ -23,6 +23,13 @@
           th:errors="*{lastName}"
           class="error"></span>
     <br><br>
+    Modules: <input type="text" th:field="*{modules}"/>
+    <!-- Add error message (if present)-->
+    <span th:if="${#fields.hasErrors('modules')}"
+          th:errors="*{modules}"
+          class="error"></span>
+
+    <br><br>
     <input type="submit" value="Submit"/>
 </form>
 
