@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" xmlns:th="http://www.thymeleaf.com">
+<html lang="en" xmlns:th="http://www.thymeleaf.com" xmlns="http://www.w3.org/1999/html">
 <head>
     <meta charset="UTF-8">
     <title>Student Registration Form</title>
@@ -12,7 +12,26 @@
     <br><br>
     Name Name: <input type="text" th:field="*{lastName}"/>
     <br><br>
+    Country : <select th:field="*{country}">
+        <option th:each="tempCountry : ${countries}" th:value="${tempCountry}" th:text="${tempCountry}"/>
+    </select>
+    <br><br>
+    Favorite Programming Language:
+    <input type="radio" th:field="*{favoriteLanguage}"
+        th:each="tempLang : ${languages}"
+        th:value="${tempLang}"
+        th:text="${tempLang}"/>
+    <br><br>
+    Favorite OS:
+    <input type="checkbox" th:field="*{favoriteOS}"
+           th:each="tempOS : ${OS}"
+           th:value="${tempOS}"
+           th:text="${tempOS}"/>
+
+    <br><br>
     <input type="submit" value="Submit"/>
+    <br><br>
+
 </form>
 
 </body>
