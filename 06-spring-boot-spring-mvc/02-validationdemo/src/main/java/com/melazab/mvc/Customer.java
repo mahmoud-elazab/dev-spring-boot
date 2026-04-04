@@ -1,9 +1,7 @@
 package com.melazab.mvc;
 
-import jakarta.validation.constraints.Max;
-import jakarta.validation.constraints.Min;
-import jakarta.validation.constraints.NotNull;
-import jakarta.validation.constraints.Size;
+import com.melazab.mvc.validation.CourseCode;
+import jakarta.validation.constraints.*;
 
 public class Customer {
     private String firstName;
@@ -12,9 +10,17 @@ public class Customer {
     @Size(min = 1, message = "Size must be at least 1 character")
     private  String lastName;
 
-    @Min(value = 1, message = "you must have at least 1 module")
-    @Max(value = 5, message = "you must have maximum 5 modules")
-    private int modules;
+    @NotNull(message = "Number of Modules is required")
+    @Min(value = 0, message = "number of modules must be between 0 and 5")
+    @Max(value = 5, message = "number of modules can't be more than 5")
+    private Integer modules;
+
+    @NotNull(message = "Postal Code is required")
+    @Pattern(regexp="^[a-zA-Z0-9]{5}", message ="Only 5 chars/digits")
+    private String postalCode;
+
+    @CourseCode(value = "RUB", message= "Course code must start with RUB")
+    private  String courseCode;
 
     public String getFirstName() {
         return firstName;
@@ -32,11 +38,27 @@ public class Customer {
         this.lastName = lastName;
     }
 
-    public int getModules() {
+    public Integer getModules() {
         return modules;
     }
 
-    public void setModules(int modules) {
+    public void setModules(Integer modules) {
         this.modules = modules;
+    }
+
+    public String getPostalCode() {
+        return postalCode;
+    }
+
+    public void setPostalCode(String postalCode) {
+        this.postalCode = postalCode;
+    }
+
+    public String getCourseCode() {
+        return courseCode;
+    }
+
+    public void setCourseCode(String courseCode) {
+        this.courseCode = courseCode;
     }
 }
