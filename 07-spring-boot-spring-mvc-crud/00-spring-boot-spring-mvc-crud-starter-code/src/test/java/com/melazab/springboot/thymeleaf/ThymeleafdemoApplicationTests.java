@@ -1,10 +1,10 @@
-package com.melazab.springboot.cruddemo;
+package com.melazab.springboot.thymeleaf;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class CruddemoApplicationTests {
+class ThymeleafdemoApplicationTests {
 
 	@Test
 	void contextLoads() {

@@ -1,6 +1,6 @@
-package com.melazab.springboot.cruddemo.service;
+package com.melazab.springboot.thymeleaf.service;
 
-import com.melazab.springboot.cruddemo.entity.Employee;
+import com.melazab.springboot.thymeleaf.entity.Employee;
 
 import java.util.List;
 

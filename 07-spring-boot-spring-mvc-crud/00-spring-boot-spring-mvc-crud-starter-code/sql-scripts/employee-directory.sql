@@ -22,8 +22,8 @@ CREATE TABLE `employee` (
 
 INSERT INTO `employee` VALUES
                            (1,'Mahmoud','Elazab','elazab.mahmoud@outlook.com'),
-                           (2,'Mariam','Nawar','maria.nawar@gmail.com'),
-                           (3,'Talaat','Mahmoud','mahmoud.talaat@outlook.de'),
-                           (4,'Alhussein','Tolba','alhussein.tolba@gmail.com'),
-                           (5,'Yassin','Gomaa','yassin_gomaa@gmail.com');
+                           (2,'Katja','Schiergott','schiergott.k@gmail.com'),
+                           (3,'Daniela','Kuhn','daniela.kuhn@outlook.de'),
+                           (4,'Sebastian','Langemann','s.langemann@gmail.com'),
+                           (5,'Hans','Flick','hans_flick@gmail.com');
 

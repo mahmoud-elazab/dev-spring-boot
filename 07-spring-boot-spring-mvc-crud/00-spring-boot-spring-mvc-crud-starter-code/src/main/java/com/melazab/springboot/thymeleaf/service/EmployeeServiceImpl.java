@@ -1,7 +1,7 @@
-package com.melazab.springboot.cruddemo.service;
+package com.melazab.springboot.thymeleaf.service;
 
-import com.melazab.springboot.cruddemo.dao.EmployeeRepository;
-import com.melazab.springboot.cruddemo.entity.Employee;
+import com.melazab.springboot.thymeleaf.dao.EmployeeRepository;
+import com.melazab.springboot.thymeleaf.entity.Employee;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
