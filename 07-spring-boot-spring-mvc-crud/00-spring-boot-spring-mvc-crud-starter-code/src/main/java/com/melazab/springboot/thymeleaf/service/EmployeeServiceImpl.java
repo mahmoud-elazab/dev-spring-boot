@@ -20,7 +20,7 @@ public class EmployeeServiceImpl implements EmployeeService {
 
     @Override
     public List<Employee> findAll() {
-        return employeeRepository.findAll();
+        return employeeRepository.findAllByOrderByLastNameAsc();
     }
 
     @Override
@@ -33,7 +33,7 @@ public class EmployeeServiceImpl implements EmployeeService {
             theEmployee = result.get();
         }
         else {
-            // we didn't find the employee
+            // employee not found
             throw new RuntimeException("Did not find employee id - " + theId);
         }
 
