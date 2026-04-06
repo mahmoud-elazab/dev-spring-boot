@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html Create new scratch file from selection>
+<html lang="en" xmlns:th="http://www.thymeleaf.org"
+                xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
 <head>
     <meta charset="UTF-8">
     <title>Home Page</title>
@@ -8,8 +9,29 @@
 
 <h2> This is the home Page</h2>
 <hr>
-<p>Welcome to the home page!
+<p>
+    Welcome to the home page!
 </p>
+<hr>
+<!-- display username and role -->
+<p>
+    User: <span sec:authentication="principal.username"></span>
+    <br><br>
+    Role(s): <span sec:authentication="principal.authorities"></span>
+</p>
+<hr>
+<!-- Add a link to point to /managers -->
+<p>
+    <a th:href="@{/managers}">Managers Meeting</a>
+    (Only for Managers)
+</p>
+<hr>
+<!-- Add a link to point to /system...only for admins -->
+<p>
+    <a th:href="@{/systems}">Systems Meeting</a>
+    (Only for Admins)
+</p>
+<hr>
 
 <!-- adding logout button -->
 <form action="#" th:action="@{/logout}" method="post">
